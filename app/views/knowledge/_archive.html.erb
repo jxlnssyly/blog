@@ -1,0 +1,8 @@
+<h3>
+  <p>博客<span>归档</span></p>
+</h3>
+    <ul class="rank">
+      <% @timelines.each do |timeline| %>
+        <li><%= link_to timeline,knowledge_path(:timeline => timeline) %></li>
+      <% end -%>
+</ul>

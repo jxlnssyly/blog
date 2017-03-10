@@ -1,0 +1,15 @@
+ <%  @articles.each do |article| %>
+      <h2><%= article.title %></h2>
+   <p class="dateview_learn"><span><%= article.created_at.strftime("%Y-%m-%d %H:%M") %></span><span>作者：<%= article.name %></span></p>
+    
+    <ul class="nlist">
+      <p><%= delete_markdown(article.content[0,200])  %>...</p>
+      <%= link_to "详细信息>>", show_path(:id => article.id), class: "readmore"  %>
+    </ul>
+    <div class="line"></div>
+
+ <% end -%>
+
+
+
+

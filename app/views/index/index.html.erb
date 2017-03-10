@@ -1,0 +1,31 @@
+
+<div class="banner">
+  <section class="box">
+    <%= render 'texts' %>
+    <div class="avatar"><a href="#"><span>廖延</span></a> </div>
+  </section>
+</div>
+
+<article>
+
+  <%= render 'blog_content', articles: @articles %>
+
+  <aside class="right">
+    <div class="weather"><iframe width="250" scrolling="no" height="60" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=12&icon=1&num=1"></iframe></div>
+    <div class="news">
+
+      <!-- 最新文章 -->
+      <%= render 'shared/rank' %>
+
+      <!-- 点击排行 -->
+      <%= render 'shared/paih' %>
+
+      <!-- 友情链接 -->
+      <%= render 'website' %>
+    </div>  
+
+  </aside>
+</article>
+
+</body>
+</html>

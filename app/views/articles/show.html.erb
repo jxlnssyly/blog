@@ -1,0 +1,51 @@
+<% provide(:title, @article.title)%>
+
+<article class="blogs">
+  <!-- 网站首页、日记导航 -->
+  <%= render 'article_header' ,article: @article %>
+
+  <!-- 文章标题 -->
+  <%= render 'article_title' ,article: @article %>
+
+  <!-- 文章内容 -->
+  <div class="index_about">
+    <ul class="infos">
+      <li>
+          <div class="article_content">
+            <%= render 'article_content',article: @article %>
+          </div>
+        
+      </li>
+    </ul>
+
+    <!-- 关键词 -->
+    <div class="keybq">
+      <%= render 'keybq' ,article: @article%>
+    </div>
+
+    <div class="ad"> </div>
+
+    
+  </div>
+
+<script>  
+        $(function() {  
+            var converter = new showdown.Converter();  
+            var text = $("#article").val();
+            var html  = converter.makeHtml(text);
+            $(".article_content").html(html);
+        });
+</script>  
+
+  <aside class="right">
+
+    <!-- Baidu Button END -->
+    <div class="blank"></div>
+    <div class="news">
+
+      <%= render 'shared/paih' %>
+      <%= render 'shared/rank' %>
+    </div>
+    
+  </aside>
+</article>

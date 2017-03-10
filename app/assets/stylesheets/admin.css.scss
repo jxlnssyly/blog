@@ -1,0 +1,50 @@
+
+.admin_index {
+	width: 200px;
+	margin: 0 auto;
+	li {
+		height: 40px;
+	}
+}
+
+.crate_article {
+	
+	.markdown {
+		float: left;
+		width: 600px;
+		padding-left: 10px;
+	}
+
+	.content {
+		height: 500px;
+		padding-left: 5px;
+	}
+
+	.markdown .title {
+		width: 590px;
+		height: 30px;
+		text-align: center;
+		line-height: 30px;
+	}
+
+	.article_content {
+		float: left;
+		padding-left: 20px;
+		width: 600px;
+	}
+
+	.publish {
+		margin-left: 30px;
+	}
+
+	.clear {
+		clear: both;
+		padding-bottom: 30px;
+	}
+}
+
+
+
+
+
+

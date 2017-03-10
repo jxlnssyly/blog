@@ -1,0 +1,10 @@
+<h3>
+<p>最新<span>文章</span></p>
+</h3>
+<ul class="rank">
+  <% latest_article.each do |article| %>
+    <li>
+      <%= link_to article.title, show_path(:id => article.id), title: article.title  %>
+    </li>
+  <% end -%>
+</ul>

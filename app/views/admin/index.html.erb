@@ -1,0 +1,18 @@
+
+<article>
+	<h3><a href="<%= new_article_path %>"> 新建博客</a></h3>	
+	<h3><%= link_to "登出", signout_path, method: "delete" %></h3>
+<h3 style="color:red;">博客列表:</h3>
+
+<ul style="text-indent: 2em;">
+	<% @articles.each do |article| %>
+		<li>
+			<h3>
+				<%= article.title %><%= link_to '  Edit', edit_article_path(id: article) %>
+				<%= link_to '  Delete', article_path(article) ,method: :delete ,data: { confirm: "确定删除#{article.title}?"} %>
+			</h3>
+		</li>
+	<% end -%>
+</ul>
+
+</article>

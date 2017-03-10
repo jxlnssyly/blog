@@ -1,0 +1,30 @@
+
+<div class="crate_article">
+	<div class="markdown">
+		<%= form_for @article  do |f| %>
+
+			<%= render 'shared/error_messages', object: f.object %>
+			<%= f.text_field :title, "type"=> "text", "placeholder" => "标题", "class" => "title"  %>
+			<%= f.text_field :keyword , "type"=> "text", "placeholder" => "关键词", "class" => "title"  %>
+			<%= f.text_area :content,  "data-provide" => "markdown", "rows" => "10", "class" => "content" %>
+			<%= f.submit "提交", class: "btn" %>
+		<% end -%>
+	</div>
+
+	<div class="article_content">
+	</div>
+	<div class="clear"></div>
+</div>
+
+<script>  
+        $(function() {  
+        	$(document).keyup(function(event){ 
+				var converter = new showdown.Converter();  
+	            var text = $(".content").val();
+	            var html  = converter.makeHtml(text);
+	            $(".article_content").html(html);
+			}); 
+
+        });
+</script> 
+
